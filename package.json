@@ -1,0 +1,18 @@
+{
+  "name": "bindelta",
+  "version": "0.1.0",
+  "description": "Streaming binary delta patching: rsync-style signatures, COPY/INSERT instruction streams, verified application.",
+  "license": "MIT",
+  "private": true,
+  "type": "commonjs",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --expose-gc --test dist/test/"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0"
+  }
+}
