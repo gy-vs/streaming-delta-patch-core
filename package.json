@@ -1,0 +1,36 @@
+{
+  "name": "streaming-delta-patch",
+  "version": "0.1.0",
+  "description": "Binary incremental patch library: chunk signatures, COPY/INSERT delta stream, bounded-memory streaming generator and verifying applier.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "NODE_OPTIONS=--expose-gc vitest run"
+  },
+  "keywords": [
+    "delta",
+    "rsync",
+    "patch",
+    "streaming",
+    "binary",
+    "checksum"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "~20.16.0",
+    "typescript": "~5.6.0",
+    "vitest": "~2.1.0"
+  }
+}
